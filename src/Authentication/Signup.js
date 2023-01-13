@@ -38,7 +38,6 @@ const Signup = () => {
         display:disp==''?'none':''
     }
 
-
     const navigate=useNavigate()
 
     const onSubmit=(values)=>{
@@ -46,7 +45,7 @@ const Signup = () => {
         async function signup(){
             try {
                 setDisp('none')
-                await axios.post('http://localhost:8000/register/signup',{
+                await axios.post('https://interactivechat-backend.onrender.com/register/signup',{
                 ...values
             }).then(res=>{
                 localStorage.setItem('userInfo',JSON.stringify(res.data))
@@ -92,8 +91,7 @@ const Signup = () => {
             console.log('Invalid type')
         }
     }
-
-
+    
   return (
     <div>
         <Formik>

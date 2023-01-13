@@ -5,7 +5,7 @@
     margin-left: 5px;
 }
 .navbar-brand{
-    font-size: 30px;margin-left: 10px;
+    font-size: 30px;margin-left: 10px;font-family:  'Open Sans';
 }
 .navimg{
     width: 40px;height: 40px;
@@ -23,4 +23,17 @@
 }
 .uploadbtn{
     margin: 10px;
+}
+
+@media (max-width:470px) {
+    .navbar{
+        height: 60px;
+    }
+    .navbar-brand{
+        font-size: 25px;margin-left: 10px;font-family:  'Open Sans';margin-bottom: 5px;
+    }
+    .navimg{
+        width: 32px;height: 32px;
+        border-radius: 50%;margin-right: 5px;
+    }
 }

@@ -18,11 +18,9 @@ const Allchats = () => {
   const user=JSON.parse(localStorage.getItem('userInfo'))
   const token=user.token
 
-  
-
     async function getsearchedData(search){
       try {
-        await axios.get('http://localhost:8000/register/signup?search='+search,{
+        await axios.get('https://interactivechat-backend.onrender.com/register/signup?search='+search,{
         headers:{
             "access-token":token
         }
@@ -31,11 +29,10 @@ const Allchats = () => {
         console.log(error)
       }
     }
-    
-
+  
     async function getallchats(){
       try {
-        await axios.get('http://localhost:8000/chats',{
+        await axios.get('https://interactivechat-backend.onrender.com/chats',{
         headers:{
             "access-token":token
         }
@@ -49,7 +46,6 @@ const Allchats = () => {
       getallchats()
     },[render])
 
-    
   const [disp,setDisp]=useState('')
   const [showcross,setShowcross]=useState('none')
 

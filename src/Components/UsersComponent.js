@@ -4,21 +4,20 @@ import { ChatState } from "../Context/Chatprovider"
 export default function UsersComponent({result,user,token,chats,setChats,setDisp,setSearch,setShowcross}){
 
     const {setSelectedchat}=ChatState()
-    
     const userId=result._id
-    
+
     const getsender=(user,chat)=>{
-        return chat.users[0]._id==user._id?chat.users[1]:chat.users[0]
+        return chat.users[0]._id===user._id?chat.users[1]:chat.users[0]
     }
 
     const handlefunction=async()=>{
         try {
-            await axios.post('http://localhost:8000/chats',{userId},{
+            await axios.post('https://interactivechat-backend.onrender.com/chats',{userId},{
             headers:{
                 "access-token":token
             }
         }).then(response=>{
-          if(!chats.find((x)=> x._id==response.data._id)){
+          if(!chats.find((x)=> x._id===response.data._id)){
             setChats([response.data,...chats])
           }
           else{

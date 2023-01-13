@@ -9,7 +9,6 @@ export default function Searchresults({user,tags,setTags,memberIds,setMemberIds}
         setMemberIds(ids)
     }
     
-
     return(
         <div className='usercont bg-white text-dark' onClick={()=>{handlesubmit()}}>
             <img className='userimg' src={user.profilepic}></img>

@@ -14,13 +14,7 @@ const Chatspage = () => {
     if(!user)navigate('/')
   },[])
   const [notification,setNotification]=useState([])
- 
- const fetchagain=(func)=>{
-  return func
- }
 
- 
-  
   return (
     <div>
       {user?

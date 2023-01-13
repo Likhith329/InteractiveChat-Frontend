@@ -36,7 +36,7 @@ const Login = () => {
         async function signup(){
             try {
                 setDisp('none')
-                await axios.post('http://localhost:8000/register/signin',{
+                await axios.post('https://interactivechat-backend.onrender.com/register/signin',{
                 ...values
             }).then(res=>{
                 localStorage.setItem('userInfo',JSON.stringify(res.data))

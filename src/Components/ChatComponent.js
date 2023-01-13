@@ -4,7 +4,6 @@ export default function ChatComponent({user,chat}){
     
     const {selectedchat,setSelectedchat,render,setRender}=ChatState()
 
- 
     const getsender=(user,chat)=>{
       return chat.users[0]?._id==user._id?chat.users[1]:chat.users[0]
     }

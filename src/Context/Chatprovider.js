@@ -1,6 +1,4 @@
-import axios from "axios";
-import { createContext, useContext, useEffect, useRef, useState } from "react";
-import { useHistory } from "react-router-dom";
+import { createContext, useContext, useState } from "react";
 
 const ChatContext = createContext();
 
@@ -8,11 +6,7 @@ const ChatProvider = ({ children }) => {
   
   const [selectedchat, setSelectedchat] = useState();
   const [notification, setNotification] = useState([]);
-  const [chats, setChats] = useState([]);
   const[render,setRender]=useState(false)
-
-  
-  
 
   return (
     <ChatContext.Provider

@@ -1,20 +1,14 @@
 import axios from 'axios'
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { toast, ToastContainer } from 'react-toastify'
 import { ChatState } from '../Context/Chatprovider'
-import Tagcomponent from './Tagcomponent'
 
 const Updategroup = ({users,setUsers}) => {
     const {selectedchat,setSelectedchat,render,setRender}=ChatState()
     
     const [name,setName]=useState('')
-    const navigate=useNavigate()
-   
-    const [chatId,setchatId]=useState('')
     const [results,setResults]=useState([])
     
-
     const user=JSON.parse(localStorage.getItem('userInfo'))
     const token=user.token
 
@@ -24,7 +18,7 @@ const Updategroup = ({users,setUsers}) => {
           }
           
         try {
-            await axios.put('http://localhost:8000/chats/renamegroup',{
+            await axios.put('https://interactivechat-backend.onrender.com/chats/renamegroup',{
                 name:name,
                 chatId:selectedchat._id
             },{
@@ -46,7 +40,7 @@ const Updategroup = ({users,setUsers}) => {
 
     async function getsearchedData(){
         try {
-          await axios.get('http://localhost:8000/register/signup?search=',{
+          await axios.get('https://interactivechat-backend.onrender.com/register/signup?search=',{
           headers:{
               "access-token":token
           }
@@ -73,7 +67,7 @@ const Updategroup = ({users,setUsers}) => {
           }
           
         try {
-            await axios.put('http://localhost:8000/chats/addtogroup',{
+            await axios.put('https://interactivechat-backend.onrender.com/chats/addtogroup',{
                 newuserId:id,
                 chatId:selectedchat._id
             },{
@@ -94,7 +88,6 @@ const Updategroup = ({users,setUsers}) => {
       
   return (
     <div >
-        
         <div className='d-flex'>
             <input className='form-control' type={'text'} value={name} placeholder='Enter new name'   onChange={(e)=>{setName(e.target.value)}} />
             <button className='btn btn-outline-primary' data-bs-target='#userprofile' data-bs-dismiss="offcanvas" aria-label="Close" onClick={()=>{

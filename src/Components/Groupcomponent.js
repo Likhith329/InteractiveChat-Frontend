@@ -6,17 +6,11 @@ import Tagcomponent from './Tagcomponent'
 
 const Groupcomponent = ({chats,setChats}) => {
     
-
     const [search,setSearch]=useState('')
     const [results,setResults]=useState('')
     const [groupname,setGroupname]=useState('')
     const [memberIds,setMemberIds]=useState([])
-    const navigate=useNavigate()
-
-    
-
     const [tags,setTags]=useState([])
-
     const user=JSON.parse(localStorage.getItem('userInfo'))
     const token=user.token
 
@@ -27,7 +21,7 @@ const Groupcomponent = ({chats,setChats}) => {
   
     async function getsearchedData(search){
         try {
-        await axios.get('http://localhost:8000/register/signup?search='+search,{
+        await axios.get('https://interactivechat-backend.onrender.com/register/signup?search='+search,{
         headers:{
             "access-token":token
         }
@@ -44,7 +38,7 @@ const Groupcomponent = ({chats,setChats}) => {
         setResults([])
         setTags([])
         try {
-            await axios.post('http://localhost:8000/chats/creategroup',{
+            await axios.post('https://interactivechat-backend.onrender.com/chats/creategroup',{
                 name:groupname,
                 users:memberIds
             },{
@@ -58,7 +52,6 @@ const Groupcomponent = ({chats,setChats}) => {
             console.log(error)
         }
     }
-
 
   return (
     <div>
