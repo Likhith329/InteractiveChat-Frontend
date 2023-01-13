@@ -1,0 +1,12 @@
+.chatspagecont{
+    display: flex;margin: 10px
+}
+.smallallchats{
+    display: block;
+}
+@media (max-width:750px) {
+    .chatspagecont{
+        display: block;margin: 5px;
+    }
+
+}

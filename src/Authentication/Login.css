@@ -1,0 +1,43 @@
+.loginform{
+    background-color:rgba(17,27,33,255);
+    width: 500px; padding: 10px;
+    display: flex;flex-direction: column;
+    align-items: center;
+    border-radius: 10px;opacity: 0.8;color: white;font-style: oblique;
+    box-shadow:0 0 8px ;border: 1px solid rgba(17,27,33,255) ;transition: 0.4s;
+}
+.error{
+    color: red;
+}
+.lbtn{
+    width: 100%;
+}
+.inputbox{
+    width: 100%;margin-bottom: 20px;
+}
+.signup{
+    text-decoration: none;
+}
+.loginp{
+    background-color: rgba(32,44,51,255);color: white;
+}
+
+
+@media(max-width:550px){
+    .loginform{
+        width: 400px; padding: 10px;font-size: small;
+    }
+    .inputbox{
+        margin-bottom: 20px;
+    }
+}
+
+@media(max-width:400px){
+    .loginform{
+        width: 350px; padding: 10px;font-size: small;
+    }
+    .inputbox{
+        margin-bottom: 10px;
+    }
+
+}

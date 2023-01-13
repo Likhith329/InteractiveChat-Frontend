@@ -1,0 +1,26 @@
+.navbar{
+    opacity: 0.8;
+}
+.bi-box-arrow-right{
+    margin-left: 5px;
+}
+.navbar-brand{
+    font-size: 30px;margin-left: 10px;
+}
+.navimg{
+    width: 40px;height: 40px;
+    border-radius: 50%;margin-right: 5px;
+}
+.canvasimg{
+    width: 250px;height:250px;border-radius: 50%;
+}
+
+.profbox{
+    display: flex;
+}
+#navbarprofile,#userprofile{
+    background-color: aqua;opacity: .9;
+}
+.uploadbtn{
+    margin: 10px;
+}

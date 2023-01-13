@@ -1,0 +1,79 @@
+.chatbox{
+    flex: 7;
+    height: 100%;background-image: url('https://i.pinimg.com/736x/85/ec/df/85ecdf1c3611ecc9b7fa85282d9526e0.jpg');
+    background-position: center;
+    object-fit: cover;
+}
+.chatboxheader{
+    background-color: rgba(30,45,54,200);color: white;display: flex;align-items: center;
+}
+.chatboxheader:hover{
+    cursor: pointer;
+}
+.chatboxalt{
+    color: white;text-align: center;font-size: 40px;margin-top:300px;
+}
+.timeago{
+    display: inline;font-size:12px;margin-left: 10px;color: rgb(198, 198, 198);
+}
+
+.input{
+    width: 100%;
+}
+.message{
+    color: white;max-width: 500px;
+    width: max-content;border-radius: 5px;padding: 8px;margin-right: 10px;font-size: 15px;margin-left: 10px;padding-top: 5px;padding-bottom: 5px;
+}
+.content{
+    display: inline;font-size:16px;
+}
+.messagebox{
+    overflow-y: auto;
+    height:530px;
+}
+.messagebox::-webkit-scrollbar {
+    width: 4px;
+  }
+.messagebox::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 2px;
+  }
+.messagebox::-webkit-scrollbar-thumb {
+    background: #888;
+  } 
+.profilename{
+    font-size: 30px;
+}
+.spin{
+    position: absolute;top: 50%;right: 35%;
+}
+.sendername{
+    font-size:smaller;
+    color: chocolate;font-weight: bold;
+}
+.bi-arrow-left-short{
+    font-size: 30px;display: none;
+}
+.bi-x-circle-fill,.bi-plus-circle-fill{
+    margin-left: 5px;
+}
+@media (max-width:750px) {
+    .bi-arrow-left-short{
+        display: block;
+    }
+    .content{
+        font-size: 14px;
+    }
+    .message{
+        max-width: 60%;
+    }
+    .timeago{
+        font-size: 10px;
+    }
+}
+
+@media (min-width:750px) and (max-width:1250px) {
+    .chatbox{
+        flex: 6;
+    }
+}
